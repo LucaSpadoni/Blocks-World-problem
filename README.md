@@ -63,7 +63,7 @@ First of all main.py must be launched by command line. During the execution you 
 
 # Evalutaion of the results
 
-### Image processing and digit classification
+## Image processing and digit classification
 
 ![cnn](https://github.com/LucaSpadoni/blocks_world_problem/blob/main/cnn.png)
 
@@ -72,4 +72,4 @@ First of all main.py must be launched by command line. During the execution you 
 ![loss](https://github.com/LucaSpadoni/blocks_world_problem/blob/main/loss.png)
 
 
-### Search algorithms
+## Search algorithms
