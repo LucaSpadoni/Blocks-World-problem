@@ -91,20 +91,20 @@ class BlocksWorld(Problem):
         j = 0
         size = (len(actions) - 1)   # Mi serve per trovarmi l'azione che porta allo stato goal
 
-        print("Stati creati: " + str(len(actions) - 1))     # Le azioni necessarie per arrivare al goal state
+        print("Created states: " + str(len(actions) - 1))     # Le azioni necessarie per arrivare al goal state
         print()
-        print("Mosse necessarie:")
+        print("Necessary moves:")
 
         for action in actions:
             i += 1
 
             if j != size:
                 if n < 9:
-                    print(f"Stato {n + 1}:    Sposta il blocco ", action[0], " in posizione (",action[2], ",",action[1],")" , sep='')
+                    print(f"State {n + 1}:    Move the block ", action[0], " in position (",action[2], ",",action[1],")" , sep='')
                 else:
-                    print(f"Stato {n + 1}:   Sposta il blocco ", action[0], " in posizione (",action[2], ",",action[1],")" , sep='')
+                    print(f"State {n + 1}:   Move the block ", action[0], " in position (",action[2], ",",action[1],")" , sep='')
             else:
-                print("Stato Goal: Sposta il blocco ", action[0], " in posizione (",action[2], ",",action[1],")" , sep='')
+                print("State Goal: Move the block ", action[0], " in position (",action[2], ",",action[1],")" , sep='')
 
             successor = self.result(state, action)
             img = self.graphical_representation(state)
