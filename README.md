@@ -18,7 +18,7 @@ The constraints with which this specific version of the problem was configured a
 - blocks must only be placed on top of other blocks or on the surface (base) of the world (they cannot float);
 - the world is a two-dimensional grid with finite width and height;
 - width and height of the world can vary in each instance of it;
-- width is an integer indicating the number of areas on which a block can be placed;
+- width is an integer indicating the number of areas on which a block can be placed (maximum number of blocks placed on the floor);
 - height is an integer that sets the maximum attainable height, forming a column that uses all the blocks in the current instance (maximum 6);
 - each block must belong to only one zone;
 - the mechanical arm can grab only one block at a time;
@@ -33,7 +33,6 @@ The program revolves mainly around 5 python files:
 - the custom_search.py file, which consists of the various search algorithms taken from the [AIMA-PYTHON](https://github.com/aimacode/aima-python) module that will be used to solve the problem;
 - the blocks_world.py file, which is a class derived from Problem contained in AIMA and which defines the actions and various intermediate states to go from the initial state to the goal state;
 - the main.py file, which takes care of the program execution.
-
 
 The search algorithms that can be used to solve the problem are:
 - uninformed algorithms:
@@ -50,3 +49,12 @@ The pictures of the two states the program uses as input can be seen  and put in
 
 ![initial](https://github.com/LucaSpadoni/blocks_world_problem/blob/main/images/states/initial4.jpg)
 ![goal](https://github.com/LucaSpadoni/blocks_world_problem/blob/main/images/states/goal4.jpg)
+
+We represent each state as a list of individual blocks, where each one is represented by the block number, its y-coordinate, its x-coordinate and the width of the world instance. For example the state relative to the previous image would be:
+goal_state: ((1, 0, 0), (2, 0, 1), (3, 1, 1), (4, 0, 2), 3)
+
+
+# How to run
+
+First of all main.py must be launched by command line. During the execution you will be asked to enter the absolute path relative to the two images depicting the initial and goal states. After having processed the images, if the two configurations coincide or if they have a different number of blocks, the program will return an error and stop. Finally, you will be asked to choose the search algorithm with which you want to find the solution. 
+
