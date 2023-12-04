@@ -7,6 +7,24 @@ This program takes as input two images, one representing the initial state and o
 ![animation](https://github.com/LucaSpadoni/blocks_world_problem/blob/main/images/animation/animation.gif)
 
 
+# Constraints
+
+The constraints with which this specific version of the problem was configured are listed below:
+- blocks must be square;
+- the blocks must all have the same size;
+- each block can have at most one block directly above it (although there is no limit for the size of a block column (except the maximum height));
+- the maximum number of blocks that can be used is 6;
+- blocks are identified by a number sequentially starting with 1;
+- blocks must only be placed on top of other blocks or on the surface (base) of the world (they cannot float);
+- the world is a two-dimensional grid with finite width and height;
+- width and height of the world can vary in each instance of it;
+- width is an integer indicating the number of areas on which a block can be placed;
+- height is an integer that sets the maximum attainable height, forming a column that uses all the blocks in the current instance (maximum 6);
+- each block must belong to only one zone;
+- the mechanical arm can grab only one block at a time;
+- the mechanical arm can only grab blocks that have no other blocks above them.
+
+
 # Structure of the program
 
 The program revolves mainly around 5 python files:
@@ -28,7 +46,7 @@ The search algorithms that can be used to solve the problem are:
     - A*
     - RBFS
 
-The pictures of the two states the program uses as input can be seen  and put in [images](https://github.com/LucaSpadoni/blocks_world_problem/tree/main/images). Under [states](https://github.com/LucaSpadoni/blocks_world_problem/tree/main/images/states) more samples of initial and goal states can be found. These images can be either hand-written like in this case and digital-made since OpenCV seems to work well with both.
+The pictures of the two states the program uses as input can be seen  and put in [images](https://github.com/LucaSpadoni/blocks_world_problem/tree/main/images). Under [states](https://github.com/LucaSpadoni/blocks_world_problem/tree/main/images/states) more samples of initial and goal states can be found (remember). These images can be either hand-written like in this case or digital-made since OpenCV seems to work well with both. For
 
 ![initial](https://github.com/LucaSpadoni/blocks_world_problem/blob/main/images/states/initial4.jpg)
 ![goal](https://github.com/LucaSpadoni/blocks_world_problem/blob/main/images/states/goal4.jpg)
