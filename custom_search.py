@@ -10,8 +10,8 @@ from search import Node
 FRONTIER_DIMENSION = 0  # Dimensione della frontiera temporanea
 EXPANDED_NODES = 0  # Numero di nodi espansi durante la ricerca
 FRONTIER_LENGTH = 0     # Massimo numero di nodi presenti nella frontiera durante la ricerca
-START_TIME = 0     # Tempo di esecuzione dell'algoritmo
-START_TIME_IDS = 0     # Tempo di esecuzione dell'algoritmo
+START_TIME = 0     # Running time of the algorithm
+START_TIME_IDS = 0     # Running time of the algorithm
 
 # __________________________________________________________________________________________________________________________
 # Uninformed Search algorithms
@@ -39,9 +39,9 @@ def breadth_first_graph_search(problem):
         if problem.goal_test(node.state):
             running_time = time.time() - START_TIME
 
-            print("Numero nodi espansi: ", EXPANDED_NODES)
-            print("Massima dimensione della frontiera: ", FRONTIER_LENGTH)
-            print("Tempo di esecuzione dell'algoritmo: ", running_time)
+            print("Number of nodes expanded: ", EXPANDED_NODES)
+            print("Maximum frontier dimension: ", FRONTIER_LENGTH)
+            print("Running time of the algorithm: ", running_time)
             return node
 
         for child in node.expand(problem):  # Le azioni possibili
@@ -70,9 +70,9 @@ def depth_first_graph_search(problem):
 
         if problem.goal_test(node.state):
             running_time = time.time() - START_TIME
-            print("Numero nodi espansi: ", EXPANDED_NODES)
-            print("Massima dimensione della frontiera: ", FRONTIER_LENGTH)
-            print("Tempo di esecuzione dell'algoritmo: ", running_time)
+            print("Number of nodes expanded: ", EXPANDED_NODES)
+            print("Maximum frontier dimension: ", FRONTIER_LENGTH)
+            print("Running time of the algorithm: ", running_time)
             return node
 
         explored.add(node.state)
@@ -101,9 +101,9 @@ def uniformed_cost_search(problem, f):
 
     if problem.goal_test(node.state):
         running_time = time.time() - START_TIME
-        print("Numero nodi espansi: ", EXPANDED_NODES)
-        print("Massima dimensione della frontiera: ", FRONTIER_LENGTH)
-        print("Tempo di esecuzione dell'algoritmo: ", running_time)
+        print("Number of nodes expanded: ", EXPANDED_NODES)
+        print("Maximum frontier dimension: ", FRONTIER_LENGTH)
+        print("Running time of the algorithm: ", running_time)
         return node
 
     f = memoize(f, 'f')     # Aggiunge al nodo l'attributo nodo.f = f(nodo)
@@ -121,9 +121,9 @@ def uniformed_cost_search(problem, f):
 
         if problem.goal_test(node.state):
             running_time = time.time() - START_TIME
-            print("Numero nodi espansi: ", EXPANDED_NODES)
-            print("Massima dimensione della frontiera: ", FRONTIER_LENGTH)
-            print("Tempo di esecuzione dell'algoritmo: ", running_time)
+            print("Number of nodes expanded: ", EXPANDED_NODES)
+            print("Maximum frontier dimension: ", FRONTIER_LENGTH)
+            print("Running time of the algorithm: ", running_time)
             return node
         
         explored.add(node.state)
@@ -158,15 +158,15 @@ def depth_limited_search(problem, limit = 10):
             if START_TIME_IDS == 0:
                 running_time = 0
                 running_time = time.time() - START_TIME
-                print("Numero nodi espansi: ", EXPANDED_NODES)
-                print("Massima dimensione della frontiera: ", FRONTIER_LENGTH)
-                print("Tempo di esecuzione dell'algoritmo: ", running_time)
+                print("Number of nodes expanded: ", EXPANDED_NODES)
+                print("Maximum frontier dimension: ", FRONTIER_LENGTH)
+                print("Running time of the algorithm: ", running_time)
             elif START_TIME_IDS != 0:
                 running_time = 0
                 running_time = time.time() - START_TIME_IDS
-                print("Numero nodi espansi: ", EXPANDED_NODES)
-                print("Massima dimensione della frontiera: ", FRONTIER_LENGTH)
-                print("Tempo di esecuzione dell'algoritmo: ", running_time)
+                print("Number of nodes expanded: ", EXPANDED_NODES)
+                print("Maximum frontier dimension: ", FRONTIER_LENGTH)
+                print("Running time of the algorithm: ", running_time)
                 START_TIME_IDS = 0 
             return node
         elif limit == 0:
@@ -235,9 +235,9 @@ def recursive_best_first_search(problem, h):
 
         if problem.goal_test(node.state):
             running_time = time.time() - START_TIME            
-            print("Numero nodi espansi: ", EXPANDED_NODES)
-            print("Massima dimensione della frontiera: ", FRONTIER_LENGTH)
-            print("Tempo di esecuzione dell'algoritmo: ", running_time)
+            print("Number of nodes expanded: ", EXPANDED_NODES)
+            print("Maximum frontier dimension: ", FRONTIER_LENGTH)
+            print("Running time of the algorithm: ", running_time)
             return node, 0  # The second value is immaterial
 
         successors = [*node.expand(problem)]
