@@ -17,8 +17,18 @@ The program revolves mainly around 5 python files:
 - the main.py file, which takes care of the program execution.
 
 
+The search algorithms that can be used to solve the problem are:
+- uninformed algorithms:
+    - BFS
+    - DFS
+    - UCS
+    - IDS
+    - DLS
+- informed algorithms:
+    - A*
+    - RBFS
 
+The pictures of the two states the program uses as input can be seen  and put in [images](https://github.com/LucaSpadoni/blocks_world_problem/tree/main/images). Under [states](https://github.com/LucaSpadoni/blocks_world_problem/tree/main/images/states) more samples of initial and goal states can be found. These images can be either hand-written like in this case and digital-made since OpenCV seems to work well with both.
 
-This program takes as input two images, one representing the initial state and one representing the goal state, from which it is able to extract configurations related to the blocks world. Once the states have been acquired
-![initial](https://github.com/LucaSpadoni/blocks_world_problem/blob/main/images/initial.jpg)
-![goal](https://github.com/LucaSpadoni/blocks_world_problem/blob/main/images/goal.jpg)
+![initial](https://github.com/LucaSpadoni/blocks_world_problem/blob/main/images/states/initial4.jpg)
+![goal](https://github.com/LucaSpadoni/blocks_world_problem/blob/main/images/states/goal4.jpg)
