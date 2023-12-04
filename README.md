@@ -55,7 +55,7 @@ The resulting animation showing the required moves using the A* algorithm would 
 ![animation](https://github.com/LucaSpadoni/blocks_world_problem/blob/main/animation.gif)
 
 
-We represent each state as a list of individual blocks, where each one is represented by the block number, its y-coordinate, its x-coordinate and the width of the world instance. For example the state relative to the second image would be:
+We represent each state as a list of individual blocks, where each one is represented by a tuple containing the block number, its y-coordinates, its x-coordinates and the width of the world instance. For example the state relative to the second image would be:
 
 
 goal_state: ((1, 0, 0), (2, 0, 1), (3, 1, 1), (4, 0, 2), 3)
