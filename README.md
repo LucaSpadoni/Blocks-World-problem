@@ -45,7 +45,7 @@ The search algorithms that can be used to solve the problem are:
     - A*
     - RBFS
 
-The pictures of the two states the program uses as input can be seen  and put in [images](https://github.com/LucaSpadoni/blocks_world_problem/tree/main/images). Under [states](https://github.com/LucaSpadoni/blocks_world_problem/tree/main/images/states) more samples of initial and goal states can be found (remember). These images can be either hand-written like in this case or digital-made since OpenCV seems to work well with both. For
+The pictures of the two states the program uses as input can be seen  and put in [images](https://github.com/LucaSpadoni/blocks_world_problem/tree/main/images). Under [states](https://github.com/LucaSpadoni/blocks_world_problem/tree/main/images/states) more samples of initial and goal states can be found (remember). These images can be either hand-written like in this case or digital-made since OpenCV seems to work well with both. Two examples of input images for the initial state and goal state could be:
 
 ![initial](https://github.com/LucaSpadoni/blocks_world_problem/blob/main/images/states/initial4.jpg)
 ![goal](https://github.com/LucaSpadoni/blocks_world_problem/blob/main/images/states/goal4.jpg)
