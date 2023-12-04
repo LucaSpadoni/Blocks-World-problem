@@ -69,7 +69,7 @@ goal_state: ((1, 0, 0), (2, 0, 1), (3, 1, 1), (4, 0, 2), 3)
 
 ## Search algorithms
 
-The performance of the search algorithms was evaluated using various metrics like expanded nodes, the maximum dimension of the fringe and the total running time to reach the goal state. In the 3-block world the algorithms show similar performance, except DFS which generates more states. In the 4-block world, the number of expanded nodes increases, except for RBFS. In the 5-block world, differences emerge between informed and uninformed algorithms, with the latter having much longer execution times. UCS did not produce a solution within 10 minutes. In the 6-block world, uninformed algorithms fail to provide solutions in a reasonable time, while informed algorithms succeed in doing so while expanding more nodes.
+The performance of the search algorithms was evaluated using various metrics like expanded nodes, the maximum dimension of the frontier and the total running time to reach the goal state. In the 3-block world the algorithms show similar performance, except DFS which generates more states. In the 4-block world, the number of expanded nodes increases, except for RBFS. In the 5-block world, differences emerge between informed and uninformed algorithms, with the latter having much longer execution times. UCS did not produce a solution within 10 minutes. In the 6-block world, uninformed algorithms fail to provide solutions in a reasonable time, while informed algorithms succeed in doing so while expanding more nodes.
 
 
 # How to run
