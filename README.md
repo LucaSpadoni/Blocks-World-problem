@@ -50,6 +50,11 @@ The pictures of the two states the program uses as input can be seen  and put in
 ![initial](https://github.com/LucaSpadoni/blocks_world_problem/blob/main/images/states/initial4.jpg)
 ![goal](https://github.com/LucaSpadoni/blocks_world_problem/blob/main/images/states/goal4.jpg)
 
+The resulting animation showing the required moves using the A* algorithm would be:
+
+![animation](https://github.com/LucaSpadoni/blocks_world_problem/blob/main/animation.gif)
+
+
 We represent each state as a list of individual blocks, where each one is represented by the block number, its y-coordinate, its x-coordinate and the width of the world instance. For example the state relative to the previous image would be:
 
 
