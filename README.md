@@ -53,7 +53,7 @@ The pictures of the two states the program uses as input can be seen  and put in
 We represent each state as a list of individual blocks, where each one is represented by the block number, its y-coordinate, its x-coordinate and the width of the world instance. For example the state relative to the previous image would be:
 
 
-goal_state: ((1, 0, 0), (2, 0, 1), (3, 1, 1), (4, 0, 2), 3)
+    goal_state: ((1, 0, 0), (2, 0, 1), (3, 1, 1), (4, 0, 2), 3)
 
 
 # How to run
