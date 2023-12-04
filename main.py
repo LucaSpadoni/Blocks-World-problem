@@ -47,64 +47,62 @@ def main():
         try:
             os.system('cls' if os.name == 'nt' else 'clear')
 
-            initial_state_path = input("Inserisci il path dell'immagine dell'initial state: ")   # C:\Users\spado\source\repos\ProgettoBlocksWorld\images\initial.jpg
+            initial_state_path = input("Insert the absolute path of the initial state: ")   
             initial_state = get_state(initial_state_path)
-            #initial_state = get_state(r"C:\Users\spado\source\repos\ProgettoBlocksWorld\images\initial.jpg")
-            print("\nLo stato iniziale relativo sarà: ")
+            print("\nThe relative initial state will be: ")
 
             for i in range(len(initial_state) - 1):
-                print("Blocco ", initial_state[i][0], " in posizione (", initial_state[i][2], ",", initial_state[i][1], ")", sep='')
+                print("Block ", initial_state[i][0], " in position (", initial_state[i][2], ",", initial_state[i][1], ")", sep='')
 
-            print("La larghezza sarà:", initial_state[len(initial_state) -1]) 
+            print("The width will be:", initial_state[len(initial_state) -1]) 
 
-            input("\nPremi invio per continuare...")
+            input("\Press enter to continue...")
             break
 
         except Exception as e:
             print(e)
-            print("File non trovato!")
+            print("File not found!")
             time.sleep(2)
 
     while True:
         try:    
             os.system('cls' if os.name == 'nt' else 'clear')
 
-            goal_state_path = input("Inserisci il path dell'immagine del goal state: ")   # C:\Users\spado\source\repos\ProgettoBlocksWorld\images\goal.jpg
+            goal_state_path = input("insert the absolute path of the goal state: ")   
             goal_state = get_state(goal_state_path)
-            #goal_state = get_state(r"C:\Users\spado\source\repos\ProgettoBlocksWorld\images\goal.jpg")
-            print("\nLo stato goal relativo sarà: ")
+            print("\nThe relative goal state will be: ")
 
             for i in range(len(goal_state) - 1):
-                print("Blocco ", goal_state[i][0], " in posizione (", goal_state[i][2], ",", goal_state[i][1], ")", sep='')
+                print("Block ", goal_state[i][0], " in position (", goal_state[i][2], ",", goal_state[i][1], ")", sep='')
 
-            print("La larghezza sarà:", goal_state[len(goal_state) -1]) 
-            input("\nPremi invio per continuare...")
+            print("The width will be:", goal_state[len(goal_state) -1]) 
+            input("\nPress enter to continue...")
 
             break
 
         except Exception:
-            print("\nFile non trovato!")    
+            print("\nFile not found!")    
             time.sleep(2)
         
     if initial_state == goal_state:
         os.system('cls' if os.name == 'nt' else 'clear')
-        sys.exit("\nLo stato iniziale e lo stato goal corrispondono!\n")
+        sys.exit("\nThe initial state and goal state are the same\n")
         
     if len(initial_state) != len(goal_state):
         os.system('cls' if os.name == 'nt' else 'clear')
-        sys.exit("\nLo stato iniziale e lo stato goal devono avere lo stesso numero di blocchi!\n")
+        sys.exit("\nThe intial state and goal state must have the same number of blocks\n")
 
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
-        print("Inserisci l'algoritmo di ricerca che vuoi utilizzare (oppure esci): - bfs")
-        print("                                                                    - dfs")
-        print("                                                                    - ucs")
-        print("                                                                    - dls")
-        print("                                                                    - ids")
-        print("                                                                    - astar")
-        print("                                                                    - rbfs")
-        print("---------------------------------------------------------------------------")
-        print("                                                                    - esci")
+        print("Choose the search algorithm that you want to use (or exit the program): - bfs")
+        print("                                                                        - dfs")
+        print("                                                                        - ucs")
+        print("                                                                        - dls")
+        print("                                                                        - ids")
+        print("                                                                        - astar")
+        print("                                                                        - rbfs")
+        print("------------------------------------------------------------------------------")
+        print("                                                                        - exit")
         choice = input("--> ")
         
         print()
@@ -125,13 +123,13 @@ def main():
                 problem.solver(search_algorithm[choice](problem, parameter_functions[choice]).solution())
 
             print()
-            input("Premi invio per continuare...")
+            input("Press enter to continue...")
 
         elif choice == "esci":
             break
 
         else:
-            print("\nInserire una scelta valida!")
+            print("\nInsert a valid choice!")
             time.sleep(2)
 
 if __name__ == '__main__':
